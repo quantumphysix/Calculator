@@ -1,0 +1,40 @@
+@IBAction func Uno(sender: AnyObject) {
+        
+        if(operationUsed == false && multiple == false){
+            num1 = 1
+            a = num1
+            number.text = "\(a)"
+            multiple = true
+            operationAvailable = true
+        }else{
+            if(operationUsed == false && multiple == true){
+                a = a * 10 + num1
+                number.text = "\(a)"
+                operationAvailable = true
+                
+            }else{
+                if(operationUsed == true && multiple == false){
+                    num2 = 1
+                    b = num2
+                    number.text = "\(b)"
+                    multiple = true
+                    onlyEqual = true
+                    
+                    
+                }else{
+                    if(operationUsed == true && multiple == true){
+                        num2 = 1
+                        b = b * 10 + num2
+                        number.text = "\(b)"
+                        onlyEqual = true
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    //Remember to duplicate for every button, changing the value of num1 and num2 every time.
